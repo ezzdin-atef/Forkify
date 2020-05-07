@@ -173,6 +173,10 @@ window.addEventListener('load', () => {
 
     // Render the existing likes
     state.likes.likes.forEach(like => likesView.renderLike(like));
+
+    state.list = new List();
+    state.list.readStorage();
+    state.list.items.forEach(l => listView.renderItem(l));
 });
 
 
